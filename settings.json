@@ -1,0 +1,373 @@
+// {
+//   "editor.formatOnSave": true,
+//   "editor.minimap.enabled": false,
+//   "editor.suggest.insertMode": "replace",
+//   "editor.linkedEditing": true,
+//   "javascript.updateImportsOnFileMove.enabled": "always",
+//   "launch": {},
+//   "[json]": {},
+//   "breadcrumbs.enabled": false,
+//   "workbench.iconTheme": "material-icon-theme",
+//   "update.showReleaseNotes": false,
+//   "zenMode.hideLineNumbers": false,
+//   "editor.lineNumbers": "relative",
+//   "vim.useSystemClipboard": true,
+//   "vim.leader": "<Space>",
+//   "vim.hlsearch": false,
+//   "vim.insertModeKeyBindings": [
+//     {
+//       "before": ["j", "k"],
+//       "after": ["<Esc>"]
+//     }
+//   ],
+//   "vim.normalModeKeyBindingsNonRecursive": [
+//     {
+//       "before": ["<S-h>"],
+//       "commands": [":bprevious"]
+//     },
+//     {
+//       "before": ["<S-l>"],
+//       "commands": [":bnext"]
+//     },
+//     {
+//       "before": ["leader", "v"],
+//       "commands": [":vsplit"]
+//     },
+//     {
+//       "before": ["leader", "s"],
+//       "commands": [":split"]
+//     },
+//     // File Explorer
+//     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+//     // LSP
+//     {
+//       "before": ["g", "h"],
+//       "commands": ["editor.action.showDefinitionPreviewHover"]
+//     },
+//     {
+//       "before": ["leader", "r", "n"],
+//       "commands": ["editor.action.rename"]
+//     },
+//     {
+//       "before": ["<leader>", "%"],
+//       "commands": [
+//         {
+//           "command": "editor.emmet.action.matchTag"
+//         }
+//       ]
+//     }
+//   ],
+//   "vim.visualModeKeyBindings": [
+//     // Stay in visual mode while indenting
+//     {
+//       "before": ["<"],
+//       "commands": ["editor.action.outdentLines"]
+//     },
+//     {
+//       "before": [">"],
+//       "commands": ["editor.action.indentlines"]
+//     },
+//     // Move selected lines while staying in visual mode
+//     {
+//       "before": ["J"],
+//       "commands": ["editor.action.moveLinesDownAction"]
+//     },
+//     {
+//       "before": ["K"],
+//       "commands": ["editor.action.moveLinesUpAction"]
+//     }
+//   ],
+//   "[typescriptreact]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "go.toolsManagement.autoUpdate": true,
+//   "[typescript]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "[jsonc]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "workbench.colorTheme": "Gruvbox Dark Hard",
+//   "window.zoomLevel": -1,
+//   "files.watcherExclude": {
+//     "**/.bloop": true,
+//     "**/.metals": true,
+//     "**/.ammonite": true
+//   },
+//   "git.autofetch": true,
+//   "svg.preview.mode": "img",
+//   "rust-analyzer.cargo.sysroot": "/home/jmeleka/snap/rustup/common/rustup/toolchains/1.67.1-x86_64-unknown-linux-gnu"
+// }
+{
+    "breadcrumbs.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.fontSize": 14,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.glyphMargin": false,
+    // This is for making the base-atelier-dune theme looks smooth on the variables
+    "editor.tokenColorCustomizations": {
+        //"variables": "#a6a28c",
+        "comments": "#2ea542"
+    },
+    // Suggestions
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.roundedSelection": false,
+    "editor.minimap.enabled": false,
+    "editor.renderLineHighlight": "none",
+    "editor.lineNumbers": "on",
+    "editor.cursorBlinking": "solid",
+    "editor.folding": false,
+    "editor.formatOnSave": true,
+    // Vim setup
+    "vim.enableNeovim": false,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.searchHighlightColor": "rgba(150, 255, 255, 0.3)",
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": false,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<S-h>"
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<S-l>"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "x"
+            ],
+            "commands": [
+                ":q"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                ":split"
+            ]
+        },
+        // File Explorer
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        // LSP
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<S-k>"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "%"
+            ],
+            "commands": [
+                {
+                    "command": "editor.emmet.action.matchTag"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentlines"
+            ]
+        },
+        // Move selected lines while staying in visual mode
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "javascript.format.enable": false,
+    "window.closeWhenEmpty": true,
+    "diffEditor.renderIndicators": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.buildFlags": [
+        "-v"
+    ],
+    "go.useLanguageServer": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.testEnvFile": "",
+    "go.toolsManagement.autoUpdate": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.cursorSurroundingLines": 10,
+    "workbench.enableExperiments": false,
+    "explorer.compactFolders": false,
+    "telemetry.telemetryLevel": "off",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.neovimUseConfigFile": true,
+    "explorer.confirmDragAndDrop": false,
+    // "editor.tabSize": 4,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "extensions.ignoreRecommendations": true,
+    "editor.guides.indentation": false,
+    "workbench.colorCustomizations": {
+        // "editorError.foreground": "#3a2525",
+        // "editorWarning.foreground": "#00000000",
+        // "editorInfo.foreground": "#00000000",
+    },
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": false,
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
+    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": false,
+    "rust-analyzer.inlayHints.reborrowHints.enable": "never",
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "never",
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "never",
+    "rust-analyzer.inlayHints.closingBraceHints.minLines": 0,
+    "rust-analyzer.completion.callable.snippets": "none",
+    "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": false,
+    "rust-analyzer.procMacro.ignored": {},
+    "workbench.activityBar.location": "hidden",
+    "update.showReleaseNotes": false,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "scheme": false
+    },
+}
