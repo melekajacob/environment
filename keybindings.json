@@ -139,5 +139,115 @@
         "key": "ctrl+shift+h",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
+    },
+    // DEBUGGER
+    // Debug: Start/Continue
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.start",
+        "when": "debugState == 'inactive'"
+    },
+    // Debug: Step Over (already F10, but can customize)
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.debug.stepOver",
+        "when": "debugState == 'stopped'"
+    },
+    // Debug: Step Into (already F11, but can customize)
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState == 'stopped'"
+    },
+    // Debug: Step Out (already Shift+F11, but can customize)
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.debug.stepOut",
+        "when": "debugState == 'stopped'"
+    },
+    // Debug: Restart (Cmd+Shift+F5)
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    // Debug: Stop (Shift+F5)
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+    // Debug: Toggle Breakpoint (F9 - already default)
+    {
+        "key": "ctrl+shift+b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    // Debug: Run to Cursor
+    {
+        "key": "cmd+f10",
+        "command": "editor.debug.action.runToCursor",
+        "when": "debugState == 'stopped'"
+    },
+    // Debug: Pause
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.debug.pause",
+        "when": "debugState == 'running'"
+    },
+    // Debug: Focus on Debug Console
+    {
+        "key": "cmd+shift+y",
+        "command": "workbench.debug.action.focusRepl",
+        "when": "inDebugMode"
+    },
+    // Debug: Focus on Variables
+    {
+        "key": "cmd+shift+v",
+        "command": "workbench.debug.action.focusVariablesView",
+        "when": "inDebugMode"
+    },
+    // Debug: Focus on Call Stack
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.debug.action.focusCallStackView",
+        "when": "inDebugMode"
+    },
+    // Debug: Focus on Watch
+    {
+        "key": "cmd+shift+w",
+        "command": "workbench.debug.action.focusWatchView",
+        "when": "inDebugMode"
+    },
+    // Debug: Add to Watch
+    {
+        "key": "cmd+shift+a",
+        "command": "editor.debug.action.selectionToWatch",
+        "when": "editorTextFocus && inDebugMode"
+    },
+    // Go: Debug Test at Cursor
+    {
+        "key": "ctrl+shift+d",
+        "command": "go.debug.cursor",
+        "when": "editorTextFocus"
+    },
+    // Go: Run Test at Cursor
+    {
+        "key": "ctrl+shift+r",
+        "command": "go.test.cursor",
+        "when": "editorTextFocus && editorLangId == 'go'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b\r"
+        },
+        "when": "terminalFocus"
     }
 ]

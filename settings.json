@@ -1,117 +1,29 @@
-// {
-//   "editor.formatOnSave": true,
-//   "editor.minimap.enabled": false,
-//   "editor.suggest.insertMode": "replace",
-//   "editor.linkedEditing": true,
-//   "javascript.updateImportsOnFileMove.enabled": "always",
-//   "launch": {},
-//   "[json]": {},
-//   "breadcrumbs.enabled": false,
-//   "workbench.iconTheme": "material-icon-theme",
-//   "update.showReleaseNotes": false,
-//   "zenMode.hideLineNumbers": false,
-//   "editor.lineNumbers": "relative",
-//   "vim.useSystemClipboard": true,
-//   "vim.leader": "<Space>",
-//   "vim.hlsearch": false,
-//   "vim.insertModeKeyBindings": [
-//     {
-//       "before": ["j", "k"],
-//       "after": ["<Esc>"]
-//     }
-//   ],
-//   "vim.normalModeKeyBindingsNonRecursive": [
-//     {
-//       "before": ["<S-h>"],
-//       "commands": [":bprevious"]
-//     },
-//     {
-//       "before": ["<S-l>"],
-//       "commands": [":bnext"]
-//     },
-//     {
-//       "before": ["leader", "v"],
-//       "commands": [":vsplit"]
-//     },
-//     {
-//       "before": ["leader", "s"],
-//       "commands": [":split"]
-//     },
-//     // File Explorer
-//     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-//     // LSP
-//     {
-//       "before": ["g", "h"],
-//       "commands": ["editor.action.showDefinitionPreviewHover"]
-//     },
-//     {
-//       "before": ["leader", "r", "n"],
-//       "commands": ["editor.action.rename"]
-//     },
-//     {
-//       "before": ["<leader>", "%"],
-//       "commands": [
-//         {
-//           "command": "editor.emmet.action.matchTag"
-//         }
-//       ]
-//     }
-//   ],
-//   "vim.visualModeKeyBindings": [
-//     // Stay in visual mode while indenting
-//     {
-//       "before": ["<"],
-//       "commands": ["editor.action.outdentLines"]
-//     },
-//     {
-//       "before": [">"],
-//       "commands": ["editor.action.indentlines"]
-//     },
-//     // Move selected lines while staying in visual mode
-//     {
-//       "before": ["J"],
-//       "commands": ["editor.action.moveLinesDownAction"]
-//     },
-//     {
-//       "before": ["K"],
-//       "commands": ["editor.action.moveLinesUpAction"]
-//     }
-//   ],
-//   "[typescriptreact]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "go.toolsManagement.autoUpdate": true,
-//   "[typescript]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "[jsonc]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   },
-//   "workbench.colorTheme": "Gruvbox Dark Hard",
-//   "window.zoomLevel": -1,
-//   "files.watcherExclude": {
-//     "**/.bloop": true,
-//     "**/.metals": true,
-//     "**/.ammonite": true
-//   },
-//   "git.autofetch": true,
-//   "svg.preview.mode": "img",
-//   "rust-analyzer.cargo.sysroot": "/home/jmeleka/snap/rustup/common/rustup/toolchains/1.67.1-x86_64-unknown-linux-gnu"
-// }
 {
-    "breadcrumbs.enabled": false,
+    "window.openFoldersInNewWindow": "on",
+    "window.openFilesInNewWindow": "on",
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "*.spaces": "linux"
+    },
+    "remote.SSH.configFile": "~/.ssh/config",
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.useExecServer": false,
+    "remote.SSH.useCurlAndWgetConfigurationFiles": true,
+    "http.proxyStrictSSL": false,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "breadcrumbs.enabled": true,
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.horizontal": "hidden",
-    "editor.fontSize": 14,
+    "editor.fontSize": 11,
     "editor.hideCursorInOverviewRuler": true,
     "editor.overviewRulerBorder": false,
-    "editor.glyphMargin": false,
-    // This is for making the base-atelier-dune theme looks smooth on the variables
+    "editor.glyphMargin": true,
     "editor.tokenColorCustomizations": {
-        //"variables": "#a6a28c",
         "comments": "#2ea542"
     },
-    // Suggestions
     "editor.acceptSuggestionOnEnter": "on",
     "editor.quickSuggestions": {
         "other": true,
@@ -125,9 +37,7 @@
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
     "editor.formatOnSave": true,
-    // Vim setup
     "vim.enableNeovim": false,
-    "vim.neovimPath": "/usr/bin/nvim",
     "vim.searchHighlightColor": "rgba(150, 255, 255, 0.3)",
     "vim.leader": "<space>",
     "vim.easymotion": true,
@@ -179,6 +89,15 @@
         {
             "before": [
                 "leader",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint"
+            ]
+        },
+        {
+            "before": [
+                "leader",
                 "x"
             ],
             "commands": [
@@ -188,13 +107,12 @@
         {
             "before": [
                 "leader",
-                "s"
+                "h"
             ],
             "commands": [
                 ":split"
             ]
         },
-        // File Explorer
         {
             "before": [
                 "leader",
@@ -204,7 +122,6 @@
                 "workbench.action.quickOpen"
             ]
         },
-        // LSP
         {
             "before": [
                 "g",
@@ -263,7 +180,6 @@
         }
     ],
     "vim.visualModeKeyBindings": [
-        // Stay in visual mode while indenting
         {
             "before": [
                 "<"
@@ -280,7 +196,6 @@
                 "editor.action.indentlines"
             ]
         },
-        // Move selected lines while staying in visual mode
         {
             "before": [
                 "J"
@@ -299,12 +214,12 @@
         }
     ],
     "workbench.startupEditor": "newUntitledFile",
-    "javascript.format.enable": false,
+    "javascript.format.enable": true,
     "window.closeWhenEmpty": true,
     "diffEditor.renderIndicators": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "go.buildFlags": [
         "-v"
@@ -313,15 +228,6 @@
     "go.autocompleteUnimportedPackages": true,
     "go.testEnvFile": "",
     "go.toolsManagement.autoUpdate": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -333,41 +239,71 @@
     "vim.cursorStylePerMode.normal": "block",
     "vim.neovimUseConfigFile": true,
     "explorer.confirmDragAndDrop": false,
-    // "editor.tabSize": 4,
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
     "extensions.ignoreRecommendations": true,
     "editor.guides.indentation": false,
-    "workbench.colorCustomizations": {
-        // "editorError.foreground": "#3a2525",
-        // "editorWarning.foreground": "#00000000",
-        // "editorInfo.foreground": "#00000000",
-    },
-    "workbench.colorTheme": "One Dark Pro Darker",
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": false,
-    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
-    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": false,
-    "rust-analyzer.inlayHints.reborrowHints.enable": "never",
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
-    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
-    "rust-analyzer.inlayHints.renderColons": false,
-    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "never",
-    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "never",
-    "rust-analyzer.inlayHints.closingBraceHints.minLines": 0,
-    "rust-analyzer.completion.callable.snippets": "none",
-    "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": false,
-    "rust-analyzer.procMacro.ignored": {},
+    "workbench.colorCustomizations": {},
     "workbench.activityBar.location": "hidden",
     "update.showReleaseNotes": false,
     "workbench.editor.enablePreviewFromQuickOpen": true,
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "scheme": false
+    "python.createEnvironment.trigger": "off",
+    "C_Cpp.default.cppStandard": "c++20",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "lldb.suppressUpdateNotifications": true,
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "cmake.showOptionsMovedNotification": false,
+    "telemetry.enableTelemetry": false,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
+    "github.copilot.advanced": {
+        "authProvider": "github"
+    },
+    "http.fetchAdditionalSupport": false,
+    "python.formatting.provider": "black",
+    "explorer.excludeGitIgnore": false,
+    "find-it-faster.general.useGitIgnoreExcludes": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "yaml.format.singleQuote": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "docker.extension.enableComposeLanguageServer": false,
+    "cSpell.userWords": [
+        "cmgrtypes",
+        "testgroup"
+    ],
+    "files.associations": {
+        "*.bml": "xml"
+    },
+    "github.copilot.enable": {
+        "markdown": true
+    },
+    "go.testTimeout": "20m",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "claudeCode.useTerminal": true,
+    "claudeCode.preferredLocation": "panel"
 }

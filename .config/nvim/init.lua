@@ -167,7 +167,7 @@ vim.opt.scrolloff = 20
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
-vim.keymap.set('i', 'jk', '<esc>', { desc = 'Return to normal mode' })
+vim.keymap.set('i', 'jk', '<esc>', { desc = 'Exit insert mode' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -669,6 +669,9 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'clangd',
+        'clang-format',
+        'codelldb',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -990,9 +993,12 @@ require('lazy').setup({
 
       nvimtree.setup {
         view = {
-          width = 30,
+          width = 40,
           relativenumber = false,
           side = 'right',
+        },
+        update_focused_file = {
+          enable = true,
         },
         -- change folder arrow icons
         renderer = {
@@ -1034,6 +1040,12 @@ require('lazy').setup({
       keymap.set('n', '<leader>ec', '<cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' }) -- collapse file explorer
       keymap.set('n', '<leader>er', '<cmd>NvimTreeRefresh<CR>', { desc = 'Refresh file explorer' }) -- refresh file explorer
     end,
+  },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
   },
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
